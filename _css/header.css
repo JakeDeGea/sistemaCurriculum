@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+a#item{
+    color: white;
+}
+
+.navbar-brand{
+    margin-left: 4.2%;
+}
+
+div#sideCollapse{
+    position: absolute;
+    float: left;
+}
