@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+body{
+    background: url("../_imagem/backcontabil.png") no-repeat center center fixed;
+    background-size: 110%;
+
+}
+
+/* ----------------- Configuração para a janela de login ----------------- */
+div#telaLogin{
+    background-color: rgba(255,255,255,.9);
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.6);
+    border-radius: 30px 30px 30px 30px;
+    padding: 10px;
+}
+
+conteiner{
+    display: block;
+    width: 920px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+}
+
+div#telaLogin{
+    margin-top: 5%;
+}
+
+input#cRemember{
+    float: left;
+    margin-top: 5%;
+}
+label#cRemember{
+    float: left;
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+section#corpo{
+    display: block;
+    width: 48%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    height: 60%;
+    float: left;
+    border-right: 1px solid rgba(0,0,0,.4);
+
+}
+
+
+/* ----------------- Configuração para icone nas barras de Login ----------------- */
+
+.inputWithIcon input[type=text]{
+    padding-left: 45px;
+}
+.inputWithIcon input[type=password]{
+    padding-left: 45px;
+}
+.inputWithIcon{
+    position: relative;
+}
+.inputWithIcon i{
+    background-color: rgba(88, 98, 100, 0.6);
+    position: absolute;
+    width: 7.5%;
+    left: 1.5px;
+    margin-top: 0%;
+    padding: 12px 10px;
+    height: 95%;
+    color: #aaa;
+    transition: .3s;
+}
