@@ -3,7 +3,7 @@
 
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 <link rel="stylesheet" href="../_css/header.css">
-<link rel="stylesheet" href="../_css/dashboard.css">
+<link rel="stylesheet" href="../_css/inicio.css">
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
 
@@ -17,7 +17,7 @@
 <div class="wrapper">
     <nav id="sidebar">
         <div class="sidebar-header">
-            <h4>Bootstrap Sidebar</h4>
+            <h5 style="text-align: center">Painel de controle</h5>
         </div>
 
         <ul class="list-unstyled components">
@@ -35,8 +35,6 @@
             </li>
         </ul>
     </nav>
-
-<img height="50%" width="50%" style="margin-top: 10%; margin-left: 15%" src="../_imagem/logoexemplo.png">
 
 </div>
 

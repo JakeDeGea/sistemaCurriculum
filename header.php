@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #004166">
         <div id="sideCollapse">
             <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                <i class="glyphicon glyphicon-th-large"></i>
+                <i class="glyphicon glyphicon-th-list"></i>
             </button>
         </div>
 
