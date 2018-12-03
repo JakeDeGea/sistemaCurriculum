@@ -12,3 +12,9 @@ div#sideCollapse{
     position: absolute;
     float: left;
 }
+
+span#logIcon{
+  color: white;
+  margin-left: 18%;
+  transition: .3s;
+}

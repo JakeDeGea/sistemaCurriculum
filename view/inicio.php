@@ -3,8 +3,14 @@
 <link rel="stylesheet" href="../_css/dashboard.css">
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
+
+<?php require_once ("../model/conexao.php"); ?>
+<?php require_once("../model/validacaoLogin.php"); //VERIFICA DADOS DO USUÁRIO CONECTADO (ID_USER, SENHA, E NÍVEL)?>
+<?php include ("../controller/seguranca.php"); //INCLUIR FUNÇÕES DE SEGURANÇA E CHAMA-LAS ABAIXO ?>
 <?php require_once ("../header.php")?>
 <?php require_once ("../dashboard.php")?>
+
+<?php protegePagina();  ?>
 
 
 <!-- Funcionalidades BOOTSTRAP E JS -->
