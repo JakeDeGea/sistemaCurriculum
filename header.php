@@ -10,9 +10,9 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #711829">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #004166">
         <div id="sideCollapse">
-            <button type="button" id="sidebarCollapse" class="btn btn-danger">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
                 <i class="glyphicon glyphicon-th-large"></i>
             </button>
         </div>
@@ -34,13 +34,12 @@
               </ul>
 
 
-
-            <img src="../_imagem/perfilexample.png" style="margin-right: 1%">
-						<div style="color: white; font-weight: bolder"><?php
+            <img src="../_imagem/perfilexample.png" style="margin-right: 1%; position: relative">
+						<div style="color: white; font-weight: bolder; position: relative"><?php
 
             echo "Olá, " . $_SESSION["usuarioLogin"];
             ?><b class="caret"></b></a>
-            <div style="color: grey; font-weight: lighter; margin-right: 1%"><?php
+            <div style="color: grey; font-weight: lighter; margin-right: 1%; position: relative"><?php
             if ($_SESSION['usuarioID'] == 1) {
               echo "@Admin";
             } elseif ($_SESSION['usuarioID'] == 2) {
@@ -51,8 +50,7 @@
            </div>
            </div>
 
-
-            <a class="nav-link" href="../controller/logout.php"><span id="logIcon" class='glyphicon glyphicon-off'></span></a>
+            <a class="nav-link" href="../controller/logout.php"><span style="position: relative" id="logIcon" class='glyphicon glyphicon-off'></span></a>
 
           </div>
     </nav>

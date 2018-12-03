@@ -9,9 +9,9 @@ body{
 /* ----------------- Configuração para a janela de login ----------------- */
 div#telaLogin{
     background-color: rgba(255,255,255,.9);
-    margin: -20px auto 0px auto;
-    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
-    border-radius: 12px 12px 12px 12px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.6);
+    border-radius: 30px 30px 30px 30px;
     padding: 10px;
 }
 
@@ -24,7 +24,7 @@ conteiner{
 }
 
 div#telaLogin{
-    margin-top: 7%;
+    margin-top: 5%;
 }
 
 input#cRemember{
@@ -42,7 +42,7 @@ section#corpo{
     width: 48%;
     margin-top: 4%;
     margin-bottom: 4%;
-    height: 50%;
+    height: 60%;
     float: left;
     border-right: 1px solid rgba(0,0,0,.4);
 

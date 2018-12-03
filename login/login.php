@@ -20,7 +20,7 @@
                             <form align="center" method="post" action="../view/inicio.php" class="loginForm">
                                 <fieldset>
                                   <div class="inputWithIcon">
-                                    <input placeholder="Usuário ou e-mail" style="width: 80%" type="text" name="login" class="form-control" id="login"/>
+                                    <input placeholder="Usuário" style="width: 80%" type="text" name="login" class="form-control" id="login"/>
                                         <i style="color: white" class="glyphicon glyphicon-user" aria-hidden="true"></i>
 
                                     </div>
@@ -43,14 +43,14 @@
                                     <input id="cRemember" style="margin-top: 13%" type="radio" name="tRemember" onclick="marcardesmarcar">
                                     <label for="tRemember" style="margin-top: 8%">Lembrar senha</label>
                                     <br>
-                                    <button id="submit" style="float:left; width:100%" type="submit" class="btn btn-danger mb-2" name="submit" value="Entrar">Entrar</button>
+                                    <button id="submit" style="float:left; width:100%" type="submit" class="btn btn-primary mb-2" name="submit" value="Entrar">Entrar</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </section>
                 <div class="col-sm">
-                    <img width="80%" style="margin-top: 20%" id="icone" src="../_imagem/logoexemplo.png">
+                    <img width="60%" style="margin-top: 20%" id="icone" src="../_imagem/logoexemplo.png">
                     <div style="display: block">
                         <p style="margin-top: 25%">Desenvolvido por <a href="">Time de Desenvolvimento</a></p>
                       </div>
