@@ -15,17 +15,22 @@ if (isset($_POST['login'])){
   if (!$acesso) {
     die("Falha na consulta");
   } else {
-      $_SESSION['usuarioID'] = $resultado['id'];
-      $_SESSION['usuarioLogin'] = $resultado['login'];
-      //$_SESSION['usuarioSenha'] = $resultado['senha']; acho que não precisa salvar a senha do user
-      $_SESSION['usuarioCodCargo'] = $resultado['id_cargo'];
+    //Definir como sessão logada para outras funções
+    $_SESSION['loginOK'] = true;
 
-      $idCargo = $_SESSION['usuarioCodCargo'];
-      $sql = "SELECT * FROM cargos WHERE id = '{$idCargo}'";
-      $acesso = mysqli_query($conecta, $sql);
-      $resultado = mysqli_fetch_assoc($acesso);
+    //Passar valores de variaveis para sessões referente ao usuário
+    $_SESSION['usuarioID'] = $resultado['id'];
+    $_SESSION['usuarioLogin'] = $resultado['login'];
+    //$_SESSION['usuarioSenha'] = $resultado['senha']; acho que não precisa salvar a senha do user
+    $_SESSION['usuarioCodCargo'] = $resultado['id_cargo'];
 
-      $_SESSION['usuarioCargo'] = $resultado['nome'];
+    //Passar valores de variaveis para sessões referente ao cargo
+    $idCargo = $_SESSION['usuarioCodCargo'];
+    $sql = "SELECT * FROM cargos WHERE id = '{$idCargo}'";
+    $acesso = mysqli_query($conecta, $sql);
+    $resultado = mysqli_fetch_assoc($acesso);
+
+    $_SESSION['usuarioCargo'] = $resultado['nome'];
     }
 }
 ?>
