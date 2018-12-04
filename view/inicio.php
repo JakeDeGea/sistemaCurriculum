@@ -29,9 +29,37 @@
             </div>
           </header>
           <section>
-            <ul class="list-unstyled components">
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <span style="background-color: black"><i style="color: white" class="glyphicon glyphicon-user"></i> Funcionarios</span>
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <ul class="list-unstyled components">
+                      <li>
+                        <a href="https://www.google.com">Cadastrar Funcionário</a>
+                      </li>
+                      <li>
+                        <a href="#pageFuncionarios">Excluir Funcionario</a>
+                      </li>
+                      <li>
+                        <a href="#pageEventos">Buscar Funcionário</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <ul class="list-unstyled components">
               <li>
                 <a href="#pageUsuarios"><i style="color: white" class="glyphicon glyphicon-user"></i> Usuarios</a>
+
               </li>
               <li>
                 <a href="#pageFuncionarios"><i style="color: white" class="glyphicon glyphicon-user"></i> Funcionarios</a>
@@ -42,27 +70,22 @@
               <li>
                 <a href="#pageCurriculos"><i style="color: white" class="	glyphicon glyphicon-file"></i> Curriculos</a>
               </li>
-            </ul>
+            </ul> -->
           </section>
         </nav>
       </aside>
 
       <!-- O conteúdo é aqui -->
-      <section>
+      <section id="corpo" >
         <div class="container-fluid">
-          <div id="sideCollapse">
-            <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                <i class="glyphicon glyphicon-th-list"></i>
-            </button>
-          </div>
         </div>
       </section>
     </div>
 
     <!--  FUNÇÕES EM JAVASCRIPT PARA DASHBOARD-->
     <script>
-      $(document).ready(function () { 
-        $('#sidebarCollapse').on('click', function () {
+      $(document).ready(function () {
+        $('#sideCollapse').on('click', function () {
           $('#sidebar').toggleClass('active');
         });
       });
