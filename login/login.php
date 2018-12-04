@@ -3,6 +3,19 @@
 
 <?php require_once ("../model/conexao.php"); ?>
 <?php require_once ("../model/validacaoLogin.php"); ?>
+<?php require ("../controller/seguranca.php"); ?>
+<?php usuarioConectado(); ?>
+
+
+<?php
+$password = "123";
+$hash = password_hash($password, PASSWORD_BCRYPT);
+
+echo $hash;
+
+ ?>
+
+
 
 <html>
     <head>
