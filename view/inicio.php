@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Curriculum</title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge, chrome=1">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="_css/header.css">
+
+  </head>
+  <body>
+
+  </body>
+</html>
+
 <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 <link rel="stylesheet" href="_css/dashboard.css">
 
@@ -7,12 +23,13 @@
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
 
-<?php require_once ("../model/conexao.php"); ?>
-<?php require_once("../model/validacaoLogin.php"); //VERIFICA DADOS DO USUÁRIO CONECTADO (ID_USER, SENHA, E NÍVEL)?>
-<?php include ("../controller/seguranca.php"); //INCLUIR FUNÇÕES DE SEGURANÇA E CHAMA-LAS ABAIXO ?>
-<?php require_once ("../header.php")?>
-
-<?php protegePagina();  ?>
+<?php
+  require_once ("../model/conexao.php");
+  require_once("../model/validacaoLogin.php"); //VERIFICA DADOS DO USUÁRIO CONECTADO (ID_USER, SENHA, E NÍVEL)
+  include ("../controller/seguranca.php"); //INCLUIR FUNÇÕES DE SEGURANÇA E CHAMA-LAS ABAIXO
+  require_once ("../header.php")
+  protegePagina();
+?>
 
 <div class="wrapper">
     <nav id="sidebar">
