@@ -8,13 +8,16 @@
       <div id="infoUsuario">
         <a><?php echo "Olá, " . $_SESSION["usuarioLogin"]; ?> <b class="caret"></b></a>
         <div id="info">
+
           <?php
+          //Verificar Nível de Cargo para exibição.
             if ($_SESSION['usuarioCodCargo'] == 1) {
-              echo "@Admin";
+              echo  $_SESSION['usuarioCargo'];
             } elseif ($_SESSION['usuarioCodCargo'] == 2) {
-                echo "@Usuario";
+              echo  $_SESSION['usuarioCargo'];
               }
           ?>
+
         </div>
       </div>
       <a class="nav-link" href="../controller/logout.php"><span id="logIcon" class='glyphicon glyphicon-off'></span></a>

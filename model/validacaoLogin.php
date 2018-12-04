@@ -15,7 +15,7 @@ if (isset($_POST['login'])){
   if (!$acesso) {
     die("Falha na consulta");
   } else {
-    //Definir como sessão logada para outras funções
+    //Definir varivavel como sessão logada para outras funções
     $_SESSION['loginOK'] = true;
 
     //Passar valores de variaveis para sessões referente ao usuário

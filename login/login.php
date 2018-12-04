@@ -6,6 +6,17 @@
 <?php require ("../controller/seguranca.php"); ?>
 <?php usuarioConectado(); ?>
 
+
+<?php
+$password = "123";
+$hash = password_hash($password, PASSWORD_BCRYPT);
+
+echo $hash;
+
+ ?>
+
+
+
 <html>
     <head>
         <meta charset="utf-8"/>
