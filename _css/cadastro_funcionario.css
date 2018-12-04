@@ -1,0 +1,11 @@
+section#corpo {
+  background: white !important;
+}
+
+section#corpo header h1{
+  font-size: 24pt;
+  font-weight: bold;
+  padding: 15px;
+  padding-bottom: 20px;
+  background-color: #dddd;
+}
