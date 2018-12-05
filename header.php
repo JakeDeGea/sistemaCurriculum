@@ -1,6 +1,12 @@
 <!-- BARRA DE NAVEGAÇÃO HEADER-->
 <header>
   <nav class="navbar navbar-expand-lg navbar-light" id="menuAcima">
+    <a href="#">
+      <div id="sideCollapse">
+        <i class="glyphicon glyphicon-th-list"></i>
+      </div>
+    </a>
+
     <a id="item" class="navbar-brand" href="inicio.php">Ultra Contabilidade</a>
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
