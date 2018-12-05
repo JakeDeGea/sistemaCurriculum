@@ -65,10 +65,10 @@
                     <div style="margin-top: 3%; margin-left: 20%" class="col-md-6">
                       <label>Cargo:</label>
                       <div class="input-group mb-1">
-                        <select class="custom-select" id="inputGroupSelect02">
+                        <select class="custom-select" name="selectCargo" id="inputGroupSelect02">
                           <option selected>Escolha...</option>
                           <option><?php foreach ($conecta->query('SELECT * FROM cargos ORDER BY nome ASC') as $row) {
-                            echo '<option value="' .$row['id'].'">' . $row['nome']. '</option>';
+                            echo '<option value="' .$row['id'].'">' . $row['nome'].'</option>';
                           } ?>
                         </option>
                         </select>
