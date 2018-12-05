@@ -40,7 +40,6 @@
       <!-- O conteúdo é aqui -->
       <section id="corpo" >
         <div class="container-fluid">
-          <h1>content</h1>
         </div>
       </section>
     </div>

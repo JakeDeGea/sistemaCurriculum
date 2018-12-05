@@ -21,9 +21,6 @@
       protegePagina();
     ?>
 
-    } ?>
-
-
     <div class="wrapper">
       <aside class="">
         <nav id="sidebar">
@@ -35,7 +32,7 @@
           <section>
             <ul id="opcoes_side_bar" class="list-unstyled components">
               <li>
-                <a href="cadastro_funcionario.php"><i style="color: white" class="glyphicon glyphicon-user"></i>Cadastrar Funcionário</a>
+                <a href="cadastro_funcionario.php"><i style="color: white" class="glyphicon glyphicon-user"></i>Cadas&shy;trar Funcio&shy;nário</a>
               </li>
             </ul>
           </section>
@@ -50,7 +47,7 @@
         </header>
         <section>
           <div class="container-fluid" id="container_cad_func">
-            <form id="form_cadastro_funcionario" action="#" method="post">
+          <form id="form_cadastro_funcionario" action="../controller/funcionario/inserirfuncionario.php" method="post">
               <fieldset id="field_dados_pessoais">
                 <legend>Dados Pessoais</legend>
 
@@ -58,11 +55,11 @@
                 <div class="form-row">
                   <div class="form-group col-md-8">
                     <label for="i_nome">Nome</label>
-                    <input type="text" class="form-control" id="i_nome" placeholder="Insira seu nome completo aqui">
+                    <input type="text" class="form-control" name="i_nome" id="i_nome" placeholder="Insira seu nome completo aqui">
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="i_nascimento">Data de Nascimento</label>
-                    <input type="date" class="form-control" id="i_nascimento">
+                    <label for="i_nascimento">Data de Nas&shy;cimen&shy;to</label>
+                    <input type="date" class="form-control" name="i_nascimento" id="i_nascimento">
                   </div>
                   <div class="form-group col-md-2">
                     <label for="">Sexo</label>
@@ -73,7 +70,7 @@
                     </label>
                     <input class="form-check-input" type="radio" name="i_sexo" id="i_fem" value="f">
                     <label class="form-check-label" for="i_fem">
-                      Feminino
+                      Femi&shy;nino
                     </label>
                   </div>
                 </div>
@@ -81,21 +78,21 @@
                 <!-- linha 2 -->
                 <div class="form-row">
                   <div class="form-group col-md-5">
-                    <label for="i_nacionalidade">Nacionalidade</label>
-                    <input type="text" class="form-control" id="i_nacionalidade" placeholder="Insira sua nacionalidade">
+                    <label for="i_nacionalidade">Na&shy;ciona&shy;lida&shy;de</label>
+                    <input type="text" class="form-control" name="i_nacionalidade" id="i_nacionalidade" placeholder="Insira sua nacionalidade">
                   </div>
                   <div class="form-group col-md-5">
-                    <label for="i_naturalidade">Naturalidade</label>
-                    <input type="text" class="form-control" id="i_naturalidade" placeholder="Insira sua naturaliade">
+                    <label for="i_naturalidade">Natu&shy;rali&shy;dade</label>
+                    <input type="text" class="form-control" name="i_naturalidade" id="i_naturalidade" placeholder="Insira sua naturaliade">
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="i_est_civil">Estado Civil</label>
-                    <select class="form-control" id="i_est_civil">
-                      <option>Solteiro(a)</option>
-                      <option>Casado(a)</option>
-                      <option>Namorando</option>
+                    <label for="i_est_civil">Esta&shy;do Ci&shy;vil</label>
+                    <select class="form-control" name="i_est_civil" id="i_est_civil">
+                      <option>Sol&shy;teiro(a)</option>
+                      <option>Casa&shy;do(a)</option>
+                      <option>Namo&shy;ran&shy;do</option>
                       <option>Viúvo(a)</option>
-                      <option selected>Fudido(a)</option>
+                      <option selected>Fu&shy;dido(a)</option>
                     </select>
                   </div>
                 </div>
@@ -104,27 +101,27 @@
                 <div class="form-row">
                   <div class="form-group col-md-2">
                     <label for="i_cpf">CPF</label>
-                    <input type="text" class="form-control" id="i_cpf" placeholder="000.000.000-00">
+                    <input type="text" class="form-control" name="i_cpf" id="i_cpf" placeholder="000.000.000-00">
                   </div>
                   <div class="form-group col-md-2">
                     <label for="i_rg">RG</label>
-                    <input type="text" class="form-control" id="i_rg" placeholder="">
+                    <input type="text" class="form-control" name="i_rg" id="i_rg" placeholder="">
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="i_data_rg">Data de Emissão do RG</label>
-                    <input type="date" class="form-control" id="i_data_rg" placeholder="">
+                    <label for="i_data_rg">Data de Emis&shy;são do RG</label>
+                    <input type="date" class="form-control" name="i_data_rg" id="i_data_rg" placeholder="">
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="i_orgao_rg">Orgão Emissor do RG</label>
-                    <input type="text" class="form-control" id="i_orgao_rg" placeholder="">
+                    <label for="i_orgao_rg">Orgão Emis&shy;sor do RG</label>
+                    <input type="text" class="form-control" name="i_orgao_rg" id="i_orgao_rg" placeholder="">
                   </div>
                   <div class="form-group col-md-2">
                     <label for="i_pis">PIS</label>
-                    <input type="text" class="form-control" id="i_pis" placeholder="000.0000.000-0">
+                    <input type="text" class="form-control" name="i_pis" id="i_pis" placeholder="000.0000.000-0">
                   </div>
                   <div class="form-group col-md-2">
                     <label for="i_pasep">PASEP</label>
-                    <input type="text" class="form-control" id="i_pasep" placeholder="000.0000.000-0">
+                    <input type="text" class="form-control" name="i_pasep" id="i_pasep" placeholder="000.0000.000-0">
                   </div>
                 </div>
 
@@ -132,92 +129,96 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="i_nome_mae">Nome da Mãe</label>
-                    <input type="text" class="form-control" id="i_nome_mae" placeholder="Insira o nome de sua mãe aqui">
+                    <input type="text" class="form-control" name="i_nome_mae" id="i_nome_mae" placeholder="Insira o nome de sua mãe aqui">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="i_nome_pai">Nome do Pai</label>
-                    <input type="text" class="form-control" id="i_nome_pai" placeholder="Insira o nome de seu pai aqui">
+                    <input type="text" class="form-control" name="i_nome_pai" id="i_nome_pai" placeholder="Insira o nome de seu pai aqui">
                   </div>
                 </div>
               </fieldset>
               <fieldset id="field_contato">
-                <legend>Contato</legend>
+                <legend>Con&shy;tato</legend>
 
                 <!-- linha 5 -->
                 <div class="form-row">
                   <div class="form-group col-md-8">
                     <label for="i_email">E-mail</label>
-                    <input type="email" class="form-control" id="i_email" placeholder="fulano@email.com">
+                    <input type="email" class="form-control" name="i_email" id="i_email" placeholder="fulano@email.com">
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="i_telefone">Telefone</label>
-                    <input type="text" class="form-control" id="i_telefone" placeholder="(99) 9 9999-9999">
+                    <label for="i_telefone">Tele&shy;fone</label>
+                    <input type="text" class="form-control" name="i_telefone" id="i_telefone" placeholder="(99) 9 9999-9999">
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="i_celular">Celular</label>
-                    <input type="text" class="form-control" id="i_celular" placeholder="(99) 9 9999-9999">
+                    <label for="i_celular">Celu&shy;lar</label>
+                    <input type="text" class="form-control" name="i_celular" id="i_celular" placeholder="(99) 9 9999-9999">
                   </div>
                 </div>
               </fieldset>
               <fieldset id="field_endereco">
-                <legend>Endereço</legend>
+                <legend>Ende&shy;reço</legend>
 
                 <!-- linha 6 -->
                 <div class="form-row">
                   <div class="form-group col-md-9">
-                    <label for="i_rua">Logradouro</label>
-                    <input type="text" class="form-control" id="i_rua" placeholder="Rua, avenida, travessa...">
+                    <label for="i_rua">Logra&shy;douro</label>
+                    <input type="text" class="form-control" name="i_rua" id="i_rua" placeholder="Rua, avenida, travessa...">
                   </div>
                   <div class="form-group col-md-1">
                     <label for="i_num">Número</label>
-                    <input type="number" class="form-control" id="i_num" placeholder="">
+                    <input type="number" class="form-control" name="i_num" id="i_num" placeholder="">
                   </div>
                   <div class="form-group col-md-2">
                     <label for="i_cep">CEP</label>
-                    <input type="text" class="form-control" id="i_cep" placeholder="00000-000">
+                    <input type="text" class="form-control" name="i_cep" id="i_cep" placeholder="00000-000">
                   </div>
                 </div>
 
                 <!-- linha 7 -->
                 <div class="form-row">
                   <div class="form-group col-md-12">
-                    <label for="i_complemento">Complemento</label>
-                    <input type="text" class="form-control" id="i_complemento" placeholder="Descreva alguma característica complementar">
+                    <label for="i_complemento">Comple&shy;mento</label>
+                    <input type="text" class="form-control" name="i_complemento" id="i_complemento" placeholder="Descreva alguma característica complementar">
                   </div>
                 </div>
 
                 <!-- linha 8 -->
                 <div class="form-row">
-                  <div class="form-group col-md-4">
-                    <label for="i_bairro">Bairro</label>
-                    <input type="text" class="form-control" id="i_bairro" placeholder="Insira o nome o bairro">
+                  <div class="form-group col-md-3">
+                    <label for="i_bairro">Bair&shy;ro</label>
+                    <input type="text" class="form-control" name="i_bairro" id="i_bairro" placeholder="Insira o nome o bairro">
                   </div>
-                  <div class="form-group col-md-4">
-                    <label for="i_cidade">Cidade</label>
-                    <input type="text" class="form-control" id="i_cidade" placeholder="Insira a cidade">
+                  <div class="form-group col-md-3">
+                    <label for="i_cidade">Ci&shy;dade</label>
+                    <input type="text" class="form-control" name="i_cidade" id="i_cidade" placeholder="Insira a cidade">
                   </div>
-                  <div class="form-group col-md-4">
+                  <div class="form-group col-md-3">
+                    <label for="i_estado">Estado</label>
+                    <input type="text" class="form-control" name="i_estado" id="i_cidade" placeholder="Insira o estado">
+                  </div>
+                  <div class="form-group col-md-3">
                     <label for="i_pais">País</label>
-                    <input type="text" class="form-control" id="i_pais" placeholder="Insira o país">
+                    <input type="text" class="form-control" name="i_pais" id="i_pais" placeholder="Insira o país">
                   </div>
                 </div>
               </fieldset>
               <fieldset id="field_user">
-                <legend>Informações de Login</legend>
+                <legend>Infor&shy;mações de Login</legend>
 
                 <!-- linha 9 -->
                 <div class="form-row">
                   <div class="form-group col-md-4">
-                    <label for="i_username">Username</label>
-                    <input type="text" class="form-control" id="i_username" placeholder="">
+                    <label for="i_username">User&shy;name</label>
+                    <input type="text" class="form-control" id="i_username" name="i_username" placeholder="">
                   </div>
                   <div class="form-group col-md-4">
                     <label for="i_senha">Senha</label>
-                    <input type="password" class="form-control" id="i_senha" placeholder="">
+                    <input type="password" class="form-control" name="i_senha" id="i_senha" placeholder="">
                   </div>
                   <div class="form-group col-md-4">
-                    <label for="i_senha_confirm">Confirme a Senha</label>
-                    <input type="password" class="form-control" id="i_senha_confirm" placeholder="">
+                    <label for="i_senha_confirm">Con&shy;firme a Senha</label>
+                    <input type="password" class="form-control" name="i_senha_confirm" id="i_senha_confirm" placeholder="">
                   </div>
                 </div>
               </fieldset>
