@@ -20,10 +20,6 @@
       include ("../header.php");
       protegePagina();
     ?>
-
-    } ?>
-
-
     <div class="wrapper">
       <aside class="">
         <nav id="sidebar">
