@@ -1,3 +1,4 @@
+
 <?php
 // VOLTA PRA PÁGINA DE LOGIN CASO OS DADOS NÃO BATEREM
 $_SG['paginaLogin'] = '../login/login.php'; // Redirecionar usuário para tela de Login
