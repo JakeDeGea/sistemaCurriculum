@@ -20,6 +20,10 @@
       include ("../header.php");
       protegePagina();
     ?>
+
+    } ?>
+
+
     <div class="wrapper">
       <aside class="">
         <nav id="sidebar">
@@ -42,9 +46,39 @@
       <section id="corpo" >
         <!-- <div class="container-fluid"> -->
           <header>
-            <h1>Cadas&shy;tro de Fun&shy;cioná&shy;rio</h1>
+            <h1>Cadastro de Funcionário</h1>
           </header>
-        <!-- </div> -->
+          <!-- Form de cadastro -->
+              <form id="dados" method="post" action="../controller/funcionario/inserirfuncionario.php" class="cadastroFun">
+                  <fieldset>
+                    <div>
+                      <label style="margin-left: 20%">Login</label>
+                      <input placeholder="Digite o nome para usuário" style="width: 50%; margin-left: 20%" type="text" name="txtLogin" id="login"/>
+                    </div>
+
+                    <div>
+                      <label style="margin-top: 3%; margin-left: 20%">Senha</label>
+                      <input placeholder="Senha" style="width: 50%; margin-left: 20%" type="password" name="txtSenha" id="senha"/>
+                    </div>
+
+                    <!-- Consulta na tabela de cargos para setar -->
+                    <div style="margin-top: 3%; margin-left: 20%" class="col-md-6">
+                      <label>Cargo:</label>
+                      <div class="input-group mb-1">
+                        <select class="custom-select" id="inputGroupSelect02">
+                          <option selected>Escolha...</option>
+                          <option><?php foreach ($conecta->query('SELECT * FROM cargos ORDER BY nome ASC') as $row) {
+                            echo '<option value="' .$row['id'].'">' . $row['nome']. '</option>';
+                          } ?>
+                        </option>
+                        </select>
+                      </div>
+                    </div>
+                    <br>
+                    <button id="cadastrar" style="float:left; margin-left: 20%" type="submit" class="btn btn-primary mb-2" name="cadastrar" value="Cadastrar">Salvar</button>
+                    <button id="limpar" style="float:left; margin-left: 1%" type="button" class="btn btn-secondary mb-2" name="limpar" value="Limpar">Limpar</button>
+                    </fieldset>
+                    <form>
           <section>
             <div class="">
 
