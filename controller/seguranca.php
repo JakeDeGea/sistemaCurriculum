@@ -28,7 +28,7 @@ function protegePagina(){
 function usuarioConectado(){
   global $_SG;
   //Se usuário estiver com sessão aberta e tentar voltar para a pagina de login
-  if ($_SESSION['loginOK'] == true) {
+  if (isset($_SESSION['loginOK'])) {
     //Há usuário conectado: Chama a função "TelaInicio()"
     telaInicio();
   }
