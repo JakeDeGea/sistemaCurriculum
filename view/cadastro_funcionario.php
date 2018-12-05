@@ -216,7 +216,7 @@
                   </div>
                 </div>
               </fieldset>
-              <button type="submit" class="btn btn-primary">Sign in</button>
+              <button type="submit" class="btn" id="btn_salvar"><h2>Salvar</h2></button>
             </form>
           </div>
         </section>

@@ -1,5 +1,6 @@
 section#corpo {
   background: white !important;
+  padding-bottom: 75px;
 }
 
 section#corpo header h1{
@@ -16,4 +17,16 @@ input#i_masc, input#i_fem {
 }
 input#i_fem {
   margin-left: 10px;
+}
+button#btn_salvar {
+  position: fixed;
+  padding: 15px;
+  padding-left: 35px;
+  padding-right: 35px;
+  right: 10px;
+  bottom: 10px;
+}
+button#btn_salvar h2 {
+  margin: 0px;
+  font-weight: bold;
 }

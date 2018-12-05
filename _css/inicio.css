@@ -12,11 +12,14 @@ body {
     background-size: 40%;
 }
 nav#sidebar {
+    position: relative;
     margin-left: -300px;
     margin-top: 10vh;
     width: 250px;
-    width: 250px;
-    height: 90vh;
+    height: inherit;
+}
+aside {
+ background-color: #383f40;
 }
 nav#sidebar.active {
     margin-left: 0px;
@@ -98,5 +101,5 @@ section#corpo {
   /* background-color: white; */
   width: 100%;
   background: url("../_imagem/logoexemplo.png") no-repeat center fixed;
-  margin-top: 10vh; 
+  margin-top: 10vh;
 }
