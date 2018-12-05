@@ -44,7 +44,7 @@
           <h1>Cadas&shy;tro de Fun&shy;cioná&shy;rio</h1>
         </header>
         <section>
-          <div class="container-fluid">
+          <div class="container-fluid" id="container_cad_func">
             <form id="form_cadastro_funcionario" action="#" method="post">
               <fieldset id="field_dados_pessoais">
                 <legend>Dados Pessoais</legend>
