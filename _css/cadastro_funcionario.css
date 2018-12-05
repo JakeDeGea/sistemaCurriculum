@@ -9,3 +9,11 @@ section#corpo header h1{
   padding-bottom: 20px;
   background-color: #dddd;
 }
+
+input#i_masc, input#i_fem {
+  position: relative;
+  margin-left: 0px;
+}
+input#i_fem {
+  margin-left: 10px;
+}
