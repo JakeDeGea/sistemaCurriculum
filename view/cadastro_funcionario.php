@@ -20,6 +20,10 @@
       include ("../header.php");
       protegePagina();
     ?>
+
+    } ?>
+
+
     <div class="wrapper">
       <aside class="">
         <nav id="sidebar">
@@ -39,6 +43,7 @@
       </aside>
 
       <!-- O conteúdo é aqui -->
+
       <section id="corpo">
         <header>
           <h1>Cadas&shy;tro de Fun&shy;cioná&shy;rio</h1>

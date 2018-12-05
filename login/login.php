@@ -3,6 +3,8 @@
 
 <?php require_once ("../model/conexao.php"); ?>
 <?php require_once ("../model/validacaoLogin.php"); ?>
+<?php require ("../controller/seguranca.php"); ?>
+<?php usuarioConectado(); ?>
 
 <html>
     <head>
