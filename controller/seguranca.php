@@ -45,7 +45,6 @@ function expulsaVisitante() {
   global $_SG;
   // Remove as variáveis da sessão (caso elas existam)
   unset($_SESSION['usuarioID'], $_SESSION['usuarioLogin'], $_SESSION['usuarioSenha'], $_SESSION['usuarioCodCargo']);
-  $_SESSION['loginOK'] = false;
   header("Location: ". $_SG['paginaLogin']);
 }
 
