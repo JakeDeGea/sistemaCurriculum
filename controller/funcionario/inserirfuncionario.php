@@ -19,12 +19,14 @@ if (!$conecta) {
 else {
   echo "Connected successfully <br>";
 
+  //LEMBRAR NA HORA DO INSERT DE CADASTRAR TODOS OS DADOS INFORMADOS, POIS SE NÃO O CÓDIGO PARA NO
+  //ECHO "Connected successfully <br>";
+
 //realizando teste
   $sql = "INSERT INTO usuarios (id, login, senha, id_cargo) VALUES ('null', '$login', '$hash', '$cargo')";
 
   if(mysqli_query($conecta, $sql)){
-    echo "New record created successfully";
-    //echo "<script>top.location.href='../../view/cadastro_funcionario.php';</script>";
+    echo "<script>top.location.href='../../view/cadastro_funcionario.php';</script>";
   } else {
       mysqli_close($conecta);
   }

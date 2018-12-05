@@ -17,7 +17,6 @@ if (isset($_POST['login'])){
   $hash = $resultado['senha'];
 
   $acesso = password_verify($senha, $hash);
-  $acesso = true;
 
 
   if (!$acesso) {
