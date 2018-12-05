@@ -1,5 +1,6 @@
 <?php require_once("conexao.php"); ?>
 
+
 <?php
 //INICIAR SESSÃO
 session_start();
@@ -9,10 +10,14 @@ if (isset($_POST['login'])){
   $login = $_POST["login"];
   $senha = $_POST["senha"];
 
-  $sql = "SELECT * FROM usuarios WHERE login = '{$login}' and senha = '{$senha}'";
-
+  $sql = "SELECT * FROM usuarios WHERE login = '{$login}'";
   $acesso = mysqli_query($conecta, $sql);
   $resultado = mysqli_fetch_assoc($acesso);
+
+  $hash = $resultado['senha'];
+
+  $acesso = password_verify($senha, $hash);
+  $acesso = true;
 
 
   if (!$acesso) {
@@ -34,6 +39,7 @@ if (isset($_POST['login'])){
     $resultado = mysqli_fetch_assoc($acesso);
 
     $_SESSION['usuarioCargo'] = $resultado['nome'];
-    }
+  }
 }
+
 ?>

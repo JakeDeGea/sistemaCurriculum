@@ -20,7 +20,7 @@ INSERT INTO cargos VALUES(null, 'padrão', 'dont have power');
 CREATE TABLE IF NOT EXISTS usuarios (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   login VARCHAR(45) NOT NULL,
-  senha VARCHAR(45) NOT NULL,
+  senha VARCHAR(100) NOT NULL,
   id_cargo INT NOT NULL,
 
   FOREIGN KEY (id_cargo) REFERENCES cargos(id)
