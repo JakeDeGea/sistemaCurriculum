@@ -20,10 +20,6 @@
       include ("../header.php");
       protegePagina();
     ?>
-
-    } ?>
-
-
     <div class="wrapper">
       <aside class="">
         <nav id="sidebar">
@@ -57,7 +53,7 @@
                     </div>
 
                     <div>
-                      <label style="margin-top: 3%; margin-left: 20%">Senha</label>
+                      <label style="margin-top: 3%; margin-left: 19%">Senha</label>
                       <input placeholder="Senha" style="width: 50%; margin-left: 20%" type="password" name="txtSenha" id="senha"/>
                     </div>
 
