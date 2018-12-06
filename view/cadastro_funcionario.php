@@ -41,11 +41,17 @@
       </aside>
 
       <!-- O conteúdo é aqui -->
-
       <section id="corpo">
         <header>
           <h1>Cadas&shy;tro de Fun&shy;cioná&shy;rio</h1>
         </header>
+        <?php if(isset($_GET['cadastroRealizado']) && $_GET['cadastroRealizado']) { ?>
+          <div class="alert alert-success">
+            <h3 class="font-weight-bold">Sucesso!</h3>
+            <hr>
+            <h4>Cadastro realizado</h4>
+          </div>
+        <?php } ?>
         <section>
           <div class="container-fluid" id="container_cad_func">
           <form id="form_cadastro_funcionario" action="../controller/funcionario/inserirfuncionario.php" method="post">
@@ -224,11 +230,31 @@
                 </div>
               </fieldset>
               <button type="submit" class="btn" id="btn_salvar"><h2>Salvar</h2></button>
+              <button type="button" class="btn" id="btn_pesquisar"><h2>Pesquisar</h2></button>
+              <button type="button" class="btn" id="btn_editar"><h2>Editar</h2></button>
+              <button type="button" class="btn" id="btn_limpar"><h2>Limpar</h2></button>
             </form>
           </div>
         </section>
       </section>
     </div>
+
+    <div id="modal_container">
+
+    </div>
+    <div id="modalzao_massa">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md">
+            <label for="m_cpf">Informe o CPF do Funcionário</label>
+            <input type="text" class="btn" name="m_cpf" id="m_cpf" value="" placeholder="000.000.000-00" required>
+          </div>
+        </div>
+        <button type="submit" name="b_m_pesquisar_func" id="b_m_pesquisar_func">Pesquisar</button>
+      </form>
+    </div>
+
+
 
     <!--  FUNÇÕES EM JAVASCRIPT PARA DASHBOARD-->
     <script>
@@ -236,6 +262,15 @@
         $('#sideCollapse').on('click', function () {
           $('#sidebar').toggleClass('active');
         });
+        $('#modal_container').on('click', function () {
+          $('#modal_container').hide();
+          $('#modalzao_massa').hide();
+        });
+        $('#btn_pesquisar').on('click', function () {
+          $('#modal_container').show();
+          $('#modalzao_massa').show();
+        });
+        
       });
     </script>
   </body>

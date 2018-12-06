@@ -1,8 +1,5 @@
+<?php require_once("conexao.php");
 
-<?php require_once("conexao.php"); ?>
-
-
-<?php
 //INICIAR SESSÃO
 session_start();
 
@@ -19,8 +16,8 @@ if (isset($_POST['login'])){
 
   $acesso = password_verify($senha, $hash);
 
-
   if (!$acesso) {
+    // $hash = password_hash($senha, PASSWORD_DEFAULT);
     die("Falha na consulta");
   } else {
     //Definir varivavel como sessão logada para outras funções
@@ -41,5 +38,4 @@ if (isset($_POST['login'])){
     $_SESSION['usuarioCargo'] = $resultado['nome'];
   }
 }
-
 ?>
