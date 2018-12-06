@@ -17,11 +17,7 @@
 
           <?php
           //Verificar Nível de Cargo para exibição.
-            if ($_SESSION['usuarioCodCargo'] == 1) {
-              echo  $_SESSION['usuarioCargo'];
-            } elseif ($_SESSION['usuarioCodCargo'] == 2) {
-              echo  $_SESSION['usuarioCargo'];
-              }
+            echo  $_SESSION['usuarioCargo'];
           ?>
 
         </div>
