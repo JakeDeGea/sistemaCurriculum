@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS cargos (
   descricao VARCHAR(255) NOT NULL
 );
 INSERT INTO cargos VALUES(null, 'Administrador', 'pika das galáxias');
-INSERT INTO cargos VALUES(null, 'padrão', 'dont have power');
+INSERT INTO cargos VALUES(null, 'funcionário', 'dont have power');
 
 -- -----------------------------------------------------
 -- Table `curriculo`.`usuario`

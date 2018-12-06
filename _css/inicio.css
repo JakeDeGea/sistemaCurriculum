@@ -6,17 +6,20 @@ body {
 }
 .wrapper {
     display: flex;
+    top: 0px;
     width: 100%;
     align-items: stretch;
-    /* background: url("../_imagem/logoexemplo.png") no-repeat center fixed; */
     background-size: 40%;
 }
 nav#sidebar {
+    position: relative;
     margin-left: -300px;
     margin-top: 10vh;
     width: 250px;
-    width: 250px;
-    height: 90vh;
+    height: inherit;
+}
+aside {
+ background-color: #383f40;
 }
 nav#sidebar.active {
     margin-left: 0px;
@@ -38,11 +41,6 @@ nav#sidebar.active {
     padding: 0;
 }
 
-/* #sidebar ul p {
-    color: #fff;
-    padding: 10px;
-} */
-
 #sidebar ul li a {
     font-family: 'Poppins', sans-serif;
     padding: 10px;
@@ -54,35 +52,6 @@ nav#sidebar.active {
     background: #262626;
 }
 
-/* #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #383f40;
-} */
-/* ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #262626;
-} */
-
-/* a[data-toggle="collapse"] {
-    position: relative;
-} */
-
-/* .dropdown-toggle::after {
-    display: block;
-    position: absolute;
-    top: 40%;
-    right: 20px;
-    transform: translateY(-50%);
-} */
-
-/* p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-    color: #999;
-} */
 ul#opcoes_side_bar li a i {
   margin-right: 10px;
 }
@@ -95,8 +64,8 @@ button#sidebarCollapse:focus :active {
   border: none;
 }
 section#corpo {
-  /* background-color: white; */
   width: 100%;
   background: url("../_imagem/logoexemplo.png") no-repeat center fixed;
-  margin-top: 10vh; 
+  margin-top: 10vh;
+  min-height: 90vh;
 }

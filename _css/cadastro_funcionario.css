@@ -1,7 +1,8 @@
 section#corpo {
-  background: white !important;
+  background: white;
+  padding: 0;
+  padding-bottom: 75px;
 }
-
 section#corpo header h1{
   font-size: 24pt;
   font-weight: bold;
@@ -9,13 +10,32 @@ section#corpo header h1{
   padding-bottom: 20px;
   background-color: #dddd;
 }
-
-form#dados{
-  margin-top: 1%;
-  margin-left: 1%;
-  width: 40%;
-  background-color: rgba(255,255,255,.9);
-  box-shadow: 0px 0px 3px rgba(0,0,0,.6);
-  border-radius: 5px 5px 5px 5px;
+section div#container_cad_func {
   padding: 10px;
+  padding-top: 20px;
+}
+fieldset {
+  border: 1px solid #383f40;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+input#i_masc, input#i_fem {
+  position: relative;
+  margin-left: 0px;
+}
+input#i_fem {
+  margin-left: 10px;
+}
+button#btn_salvar {
+  position: fixed;
+  padding: 15px;
+  padding-left: 35px;
+  padding-right: 35px;
+  right: 10px;
+  bottom: 10px;
+  background-color: #94ba33;
+}
+button#btn_salvar h2 {
+  margin: 0px;
+  font-weight: bold;
 }
