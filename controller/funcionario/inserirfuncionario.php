@@ -2,10 +2,6 @@
 require_once ("../../model/conexao.php");  //Conexao com o banco
 include ("../seguranca.php"); //INCLUIR FUNÇÕES DE SEGURANÇA E CHAMA-LAS ABAIXO
 
-//PEGA O VALOR NAME="txtLogin" do tipo _POST DO FORM CADASTRO_FUNCIONARIO
-$login = filter_input(INPUT_POST, 'txtLogin', FILTER_SANITIZE_STRING);
-
-
 if (!$conecta) {
   die("Connection failed: " . mysqli_connect_error());
 } else {
@@ -17,12 +13,14 @@ if (!$conecta) {
     $senha = $_POST['i_senha'];
     $senhaConfirm = $_POST['i_senha_confirm'];
 
+
+
     if ($senha == $senhaConfirm) {
       $sql = "SELECT * FROM usuarios WHERE login = '$user'";
       $acesso = mysqli_query($conecta, $sql);
       $resultado = mysqli_fetch_assoc($acesso);
       // var_dump(count($resultado));
-
+      $hash = password_hash($senha, PASSWORD_DEFAULT);
       $aux = count($resultado);
       if ($aux == 0) {
         // aqui comeca a parte de enderecos
@@ -86,9 +84,8 @@ if (!$conecta) {
               //começa de fato a cadastrar
 
               // CADASTRO DE USUÁRIO
-              $sql = "INSERT INTO usuarios VALUES (null, '$user', '$senha', 2)";
+              $sql = "INSERT INTO usuarios VALUES (null, '$user', '$hash', 2)";
               if(mysqli_query($conecta, $sql)){
-
                 //pega o id do último usuário cadastrado
                 $sql = "SELECT MAX(id) FROM usuarios";
                 $acesso = mysqli_query($conecta, $sql);
