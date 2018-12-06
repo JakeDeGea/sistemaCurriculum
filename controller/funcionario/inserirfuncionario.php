@@ -4,7 +4,13 @@ include ("../seguranca.php"); //INCLUIR FUNÇÕES DE SEGURANÇA E CHAMA-LAS ABAI
 
 //PEGA O VALOR NAME="txtLogin" do tipo _POST DO FORM CADASTRO_FUNCIONARIO
 $login = filter_input(INPUT_POST, 'txtLogin', FILTER_SANITIZE_STRING);
+//PEGA O VALOR NAME="txtSenha" do tipo _POST DO FORM CADASTRO_FUNCIONARIO
+$senha = filter_input(INPUT_POST, 'txtSenha', FILTER_SANITIZE_STRING);
 
+$hash = password_hash($senha, PASSWORD_DEFAULT);
+
+// PEGA O VALOR DO NAME="selectCargo" DO SELECT GROUP
+$cargo = filter_input(INPUT_POST, 'selectCargo', FILTER_SANITIZE_STRING);
 
 if (!$conecta) {
   die("Connection failed: " . mysqli_connect_error());
@@ -88,7 +94,6 @@ if (!$conecta) {
               // CADASTRO DE USUÁRIO
               $sql = "INSERT INTO usuarios VALUES (null, '$user', '$senha', 2)";
               if(mysqli_query($conecta, $sql)){
-
                 //pega o id do último usuário cadastrado
                 $sql = "SELECT MAX(id) FROM usuarios";
                 $acesso = mysqli_query($conecta, $sql);
