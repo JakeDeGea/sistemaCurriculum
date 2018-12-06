@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS cargos (
   descricao VARCHAR(255) NOT NULL
 );
 INSERT INTO cargos VALUES(null, 'Administrador', 'pika das galáxias');
-INSERT INTO cargos VALUES(null, 'padrão', 'dont have power');
+INSERT INTO cargos VALUES(null, 'funcionário', 'dont have power');
 
 -- -----------------------------------------------------
 -- Table `curriculo`.`usuario`
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
   login VARCHAR(45) NOT NULL,
   senha VARCHAR(45) NOT NULL,
   id_cargo INT NOT NULL,
-  
+
   FOREIGN KEY (id_cargo) REFERENCES cargos(id)
   ON UPDATE CASCADE ON DELETE RESTRICT
 );
@@ -69,10 +69,10 @@ CREATE TABLE IF NOT EXISTS funcionarios (
   telefone VARCHAR(45),
   telefone_celular VARCHAR(45) NOT NULL,
   email VARCHAR(255) NOT NULL,
-  
-  FOREIGN KEY (id_usuario) REFERENCES usuarios(id) 
+
+  FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
   ON UPDATE CASCADE ON DELETE RESTRICT,
-  FOREIGN KEY (id_endereco) REFERENCES enderecos(id) 
+  FOREIGN KEY (id_endereco) REFERENCES enderecos(id)
   ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
@@ -90,10 +90,10 @@ CREATE TABLE IF NOT EXISTS formacoes (
   instituicao VARCHAR(255) NOT NULL,
   observacao VARCHAR(500),
   certificado_formacao BLOB NOT NULL,
-  
-  FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id) 
+
+  FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id)
   ON UPDATE CASCADE ON DELETE RESTRICT,
-  FOREIGN KEY (id_endereco) REFERENCES enderecos(id) 
+  FOREIGN KEY (id_endereco) REFERENCES enderecos(id)
   ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
@@ -113,10 +113,10 @@ CREATE TABLE IF NOT EXISTS eventos (
   area VARCHAR(45) NOT NULL,
   apresentador VARCHAR(255),
   certificado_evento BLOB NOT NULL,
-  
-  FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id) 
+
+  FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id)
   ON UPDATE CASCADE ON DELETE RESTRICT,
-  FOREIGN KEY (id_endereco) REFERENCES enderecos(id) 
+  FOREIGN KEY (id_endereco) REFERENCES enderecos(id)
   ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
@@ -135,9 +135,9 @@ CREATE TABLE IF NOT EXISTS experiencias (
   descricao VARCHAR(500),
   situacao VARCHAR(45),
 
-  FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id) 
+  FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id)
   ON UPDATE CASCADE ON DELETE RESTRICT,
-  FOREIGN KEY (id_endereco) REFERENCES enderecos(id) 
+  FOREIGN KEY (id_endereco) REFERENCES enderecos(id)
   ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
@@ -156,9 +156,9 @@ CREATE TABLE IF NOT EXISTS cursos (
   descricao VARCHAR(500),
   total_aulas INT NOT NULL,
   certificado_curso BLOB NOT NULL,
-  
-  FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id) 
+
+  FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id)
   ON UPDATE CASCADE ON DELETE RESTRICT,
-  FOREIGN KEY (id_endereco) REFERENCES enderecos(id) 
+  FOREIGN KEY (id_endereco) REFERENCES enderecos(id)
   ON UPDATE CASCADE ON DELETE RESTRICT
 );

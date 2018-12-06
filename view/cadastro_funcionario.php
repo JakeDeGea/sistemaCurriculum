@@ -55,11 +55,11 @@
                 <div class="form-row">
                   <div class="form-group col-md-8">
                     <label for="i_nome">Nome</label>
-                    <input type="text" class="form-control" name="i_nome" id="i_nome" placeholder="Insira seu nome completo aqui">
+                    <input type="text" class="form-control" name="i_nome" id="i_nome" placeholder="Insira seu nome completo aqui" required>
                   </div>
                   <div class="form-group col-md-2">
                     <label for="i_nascimento">Data de Nas&shy;cimen&shy;to</label>
-                    <input type="date" class="form-control" name="i_nascimento" id="i_nascimento">
+                    <input type="date" class="form-control" name="i_nascimento" id="i_nascimento" required>
                   </div>
                   <div class="form-group col-md-2">
                     <label for="">Sexo</label>
@@ -79,7 +79,7 @@
                 <div class="form-row">
                   <div class="form-group col-md-5">
                     <label for="i_nacionalidade">Na&shy;ciona&shy;lida&shy;de</label>
-                    <input type="text" class="form-control" name="i_nacionalidade" id="i_nacionalidade" placeholder="Insira sua nacionalidade">
+                    <input type="text" class="form-control" name="i_nacionalidade" id="i_nacionalidade" placeholder="Insira sua nacionalidade" required>
                   </div>
                   <div class="form-group col-md-5">
                     <label for="i_naturalidade">Natu&shy;rali&shy;dade</label>
@@ -101,27 +101,27 @@
                 <div class="form-row">
                   <div class="form-group col-md-2">
                     <label for="i_cpf">CPF</label>
-                    <input type="text" class="form-control" name="i_cpf" id="i_cpf" placeholder="000.000.000-00">
+                    <input type="text" class="form-control" name="i_cpf" id="i_cpf" placeholder="000.000.000-00" required>
                   </div>
                   <div class="form-group col-md-2">
                     <label for="i_rg">RG</label>
-                    <input type="text" class="form-control" name="i_rg" id="i_rg" placeholder="">
+                    <input type="text" class="form-control" name="i_rg" id="i_rg" placeholder="" required>
                   </div>
                   <div class="form-group col-md-2">
                     <label for="i_data_rg">Data de Emis&shy;são do RG</label>
-                    <input type="date" class="form-control" name="i_data_rg" id="i_data_rg" placeholder="">
+                    <input type="date" class="form-control" name="i_data_rg" id="i_data_rg" placeholder="" required>
                   </div>
                   <div class="form-group col-md-2">
                     <label for="i_orgao_rg">Orgão Emis&shy;sor do RG</label>
-                    <input type="text" class="form-control" name="i_orgao_rg" id="i_orgao_rg" placeholder="">
+                    <input type="text" class="form-control" name="i_orgao_rg" id="i_orgao_rg" placeholder="" required>
                   </div>
                   <div class="form-group col-md-2">
                     <label for="i_pis">PIS</label>
-                    <input type="text" class="form-control" name="i_pis" id="i_pis" placeholder="000.0000.000-0">
+                    <input type="text" class="form-control" name="i_pis" id="i_pis" placeholder="000.0000.000-0" required>
                   </div>
                   <div class="form-group col-md-2">
                     <label for="i_pasep">PASEP</label>
-                    <input type="text" class="form-control" name="i_pasep" id="i_pasep" placeholder="000.0000.000-0">
+                    <input type="text" class="form-control" name="i_pasep" id="i_pasep" placeholder="000.0000.000-0" required>
                   </div>
                 </div>
 
@@ -129,11 +129,11 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="i_nome_mae">Nome da Mãe</label>
-                    <input type="text" class="form-control" name="i_nome_mae" id="i_nome_mae" placeholder="Insira o nome de sua mãe aqui">
+                    <input type="text" class="form-control" name="i_nome_mae" id="i_nome_mae" placeholder="Insira o nome de sua mãe aqui" required>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="i_nome_pai">Nome do Pai</label>
-                    <input type="text" class="form-control" name="i_nome_pai" id="i_nome_pai" placeholder="Insira o nome de seu pai aqui">
+                    <input type="text" class="form-control" name="i_nome_pai" id="i_nome_pai" placeholder="Insira o nome de seu pai aqui" required>
                   </div>
                 </div>
               </fieldset>
@@ -144,7 +144,7 @@
                 <div class="form-row">
                   <div class="form-group col-md-8">
                     <label for="i_email">E-mail</label>
-                    <input type="email" class="form-control" name="i_email" id="i_email" placeholder="fulano@email.com">
+                    <input type="email" class="form-control" name="i_email" id="i_email" placeholder="fulano@email.com" required>
                   </div>
                   <div class="form-group col-md-2">
                     <label for="i_telefone">Tele&shy;fone</label>
@@ -152,7 +152,7 @@
                   </div>
                   <div class="form-group col-md-2">
                     <label for="i_celular">Celu&shy;lar</label>
-                    <input type="text" class="form-control" name="i_celular" id="i_celular" placeholder="(99) 9 9999-9999">
+                    <input type="text" class="form-control" name="i_celular" id="i_celular" placeholder="(99) 9 9999-9999" required>
                   </div>
                 </div>
               </fieldset>
@@ -163,7 +163,7 @@
                 <div class="form-row">
                   <div class="form-group col-md-9">
                     <label for="i_rua">Logra&shy;douro</label>
-                    <input type="text" class="form-control" name="i_rua" id="i_rua" placeholder="Rua, avenida, travessa...">
+                    <input type="text" class="form-control" name="i_rua" id="i_rua" placeholder="Rua, avenida, travessa..." required>
                   </div>
                   <div class="form-group col-md-1">
                     <label for="i_num">Número</label>
@@ -171,7 +171,7 @@
                   </div>
                   <div class="form-group col-md-2">
                     <label for="i_cep">CEP</label>
-                    <input type="text" class="form-control" name="i_cep" id="i_cep" placeholder="00000-000">
+                    <input type="text" class="form-control" name="i_cep" id="i_cep" placeholder="00000-000" required>
                   </div>
                 </div>
 
@@ -187,19 +187,19 @@
                 <div class="form-row">
                   <div class="form-group col-md-3">
                     <label for="i_bairro">Bair&shy;ro</label>
-                    <input type="text" class="form-control" name="i_bairro" id="i_bairro" placeholder="Insira o nome o bairro">
+                    <input type="text" class="form-control" name="i_bairro" id="i_bairro" placeholder="Insira o nome o bairro" required>
                   </div>
                   <div class="form-group col-md-3">
                     <label for="i_cidade">Ci&shy;dade</label>
-                    <input type="text" class="form-control" name="i_cidade" id="i_cidade" placeholder="Insira a cidade">
+                    <input type="text" class="form-control" name="i_cidade" id="i_cidade" placeholder="Insira a cidade" required>
                   </div>
                   <div class="form-group col-md-3">
                     <label for="i_estado">Estado</label>
-                    <input type="text" class="form-control" name="i_estado" id="i_cidade" placeholder="Insira o estado">
+                    <input type="text" class="form-control" name="i_estado" id="i_cidade" placeholder="Insira o estado" required>
                   </div>
                   <div class="form-group col-md-3">
                     <label for="i_pais">País</label>
-                    <input type="text" class="form-control" name="i_pais" id="i_pais" placeholder="Insira o país">
+                    <input type="text" class="form-control" name="i_pais" id="i_pais" placeholder="Insira o país" required>
                   </div>
                 </div>
               </fieldset>
@@ -210,15 +210,15 @@
                 <div class="form-row">
                   <div class="form-group col-md-4">
                     <label for="i_username">User&shy;name</label>
-                    <input type="text" class="form-control" id="i_username" name="i_username" placeholder="">
+                    <input type="text" class="form-control" id="i_username" name="i_username" placeholder="" required>
                   </div>
                   <div class="form-group col-md-4">
                     <label for="i_senha">Senha</label>
-                    <input type="password" class="form-control" name="i_senha" id="i_senha" placeholder="">
+                    <input type="password" class="form-control" name="i_senha" id="i_senha" placeholder="" required>
                   </div>
                   <div class="form-group col-md-4">
                     <label for="i_senha_confirm">Con&shy;firme a Senha</label>
-                    <input type="password" class="form-control" name="i_senha_confirm" id="i_senha_confirm" placeholder="">
+                    <input type="password" class="form-control" name="i_senha_confirm" id="i_senha_confirm" placeholder="" required>
                   </div>
                 </div>
               </fieldset>
