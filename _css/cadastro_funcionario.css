@@ -1,5 +1,6 @@
 section#corpo {
   background: white;
+  padding: 0;
   padding-bottom: 75px;
 }
 section#corpo header h1{
