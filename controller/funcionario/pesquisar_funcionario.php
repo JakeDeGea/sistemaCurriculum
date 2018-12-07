@@ -25,6 +25,7 @@ if(!empty($_GET['m_cpf'])) {
         o nome do banco de dados e não da aplicação
       */
       'data' => [
+          //Parametros                   Atributo banco de dados
                 'nome'=> $resultado->nome,
                 'nascimento' => $resultado->data_nas,
                 'sexo' => $resultado->sexo,
@@ -51,7 +52,8 @@ if(!empty($_GET['m_cpf'])) {
                 'estado' => $resultado->estado,
                 'pais' => $resultado->pais,
                 'login' => $resultado->login,
-                'senha' => $resultado->senha
+                'senha' => $resultado->senha,
+                'status' => $resultado->status
               ]
     ]);
     exit;

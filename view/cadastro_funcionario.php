@@ -42,6 +42,16 @@
       <section id="corpo">
         <header>
           <h1 id="topo_info">Cadastrar Fun&shy;cioná&shy;rio</h1>
+
+          <!-- botão FLIPSWITCH do status funcionario, ativo ou não) -->
+          <div id="f_flipswitch" class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+            <label class="onoffswitch-label" for="myonoffswitch">
+              <span class="onoffswitch-inner"></span>
+              <span class="onoffswitch-switch"></span>
+            </label>
+          </div>
+
         </header>
         <?php if(isset($_GET['cadastroRealizado']) && $_GET['cadastroRealizado']) { ?>
           <div class="alert alert-success">
@@ -53,6 +63,7 @@
 
         <section>
           <div class="container-fluid" id="container_cad_func">
+
           <form id="form_cadastro_funcionario" action="../controller/funcionario/inserirfuncionario.php" method="post">
               <fieldset id="field_dados_pessoais">
                 <legend>Dados Pessoais</legend>
@@ -230,7 +241,6 @@
               </fieldset>
               <button type="submit" class="btn" id="btn_salvar"><h2>Salvar</h2></button>
               <button type="button" class="btn" id="btn_pesquisar"><h2>Pesquisar</h2></button>
-              <button type="button" class="btn" id="btn_excluir"><h2>Excluir</h2></button>
               <button type="button" class="btn" id="btn_limpar"><h2>Limpar</h2></button>
             </form>
           </div>
@@ -247,6 +257,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <br>
       <form id="modal_form">
         <div class="form-row">
           <div class="form-group col-md">
@@ -274,8 +285,8 @@
     <script>
       $(document).ready(function () {
         $('#btn_limpar').on('click', function () {
-          // esconde o botao excluir
-          $('#btn_excluir').hide();
+          // esconde o botao Flipswitch
+          $('#f_flipswitch').hide();
 
           // volta o topo pra cadastrar funcionario
           $('#topo_info').text('Cadastrar Funcionário');
@@ -306,6 +317,7 @@
           $('#i_username').val('');
           $('#i_senha').val('');
           $('#i_senha_confirm').val('');
+          $('#a_status').val('');
           $('#i_nome').focus();
         });
         // Função do abre e fecha (Dashboard)
@@ -372,6 +384,13 @@
               $('#i_pais').val(data.pais);
               $('#i_username').val(data.login);
               $('#i_cpf').val(data.cpf);
+              $('#a_status').val(data.status);
+
+              if ($('#a_status').val() == 1){
+                $('#a_status').val('Ativo');
+              } else {
+                $('#a_status').val('Inativo');
+              }
 
               // esconde o modal
               $('#modal_container').hide();
@@ -389,8 +408,10 @@
               // muda o topo pra editar funcionario
               $('#topo_info').text('Editar Funcionário');
 
-              // mostra o botao excluir
-              $('#btn_excluir').show();
+              // mostra o botao Flipswitch
+              $('#f_flipswitch').show();
+
+
             } else {
               // esconde o modal
               $('#modal_container').hide();
@@ -408,6 +429,7 @@
           } /* fim do get*/);
         }); //fim da função Pesquisar
       });
+
     </script>
   </body>
 </html>

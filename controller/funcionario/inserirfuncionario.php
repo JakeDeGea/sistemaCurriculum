@@ -85,7 +85,7 @@ if (!$conecta) {
               //começa de fato a cadastrar
 
               // CADASTRO DE USUÁRIO
-              $sql = "INSERT INTO usuarios VALUES (null, '$user', '$hash', 2)";
+              $sql = "INSERT INTO usuarios VALUES (null, '$user', '$hash', 2, 1)"; //Insert com o cargo e status definidos
               if(mysqli_query($conecta, $sql)){
                 //pega o id do último usuário cadastrado
                 $sql = "SELECT MAX(id) FROM usuarios";

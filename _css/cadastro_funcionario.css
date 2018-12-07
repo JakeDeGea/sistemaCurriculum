@@ -3,13 +3,18 @@ section#corpo {
   padding: 0;
   padding-bottom: 75px;
 }
+section#corpo header{
+  background-color: #dddd;
+}
+
 section#corpo header h1{
   font-size: 24pt;
   font-weight: bold;
   padding: 15px;
   margin-bottom: 0px;
   padding-bottom: 20px;
-  background-color: #dddd;
+  max-width: 500px;
+  display: inline-block;
 }
 section div#container_cad_func {
   padding: 10px;
@@ -27,8 +32,8 @@ input#i_masc, input#i_fem {
 input#i_fem {
   margin-left: 10px;
 }
-button#btn_salvar, button#btn_excluir,
-button#btn_pesquisar, button#btn_limpar {
+button#btn_salvar, button#btn_pesquisar,
+button#btn_limpar {
   position: fixed;
   padding: 15px;
   padding-left: 35px;
@@ -48,15 +53,9 @@ button#btn_limpar {
   bottom: 10px;
   background-color: #94ba33;
 }
-button#btn_excluir {
-  opacity: 1;
-  display: none;
-  right: 584px;
-  bottom: 10px;
-  background-color: #94ba33;
-}
-button#btn_salvar h2, button#btn_excluir h2,
-button#btn_pesquisar h2, button#btn_limpar h2 {
+
+button#btn_salvar h2, button#btn_pesquisar h2,
+button#btn_limpar h2 {
   margin: 0px;
   font-weight: bold;
 }
@@ -99,6 +98,54 @@ input#m_cpf{
   margin: auto;
   align: middle;
   text-align: center;
+}
 
 
+/* Botão do AJAX para desabilitar ou habilitar status do Usuario CSS */
+
+.onoffswitch {
+    margin-top: 1%; margin-right: 1%;
+    float: right;
+    position: relative; width: 110px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #dddd; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 40px; padding: 0; line-height: 40px;
+    font-size: 15px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "Ativo";
+    padding-left: 10px;
+    background-color: #00abdc; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "Inativo";
+    padding-right: 10px;
+    background-color: rgba(56,63,63,0.3); color: #white;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 5px; height: 5px; margin: 5px;
+    position: absolute; top: 0; bottom: 0;
+    right: 66px;
+    border: 14px solid #FFFFFF; border-radius: 20px; margin-top: 7px; margin-right: 7px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
 }

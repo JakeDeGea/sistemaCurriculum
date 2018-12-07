@@ -23,11 +23,12 @@ CREATE TABLE IF NOT EXISTS usuarios (
   login VARCHAR(45) NOT NULL,
   senha VARCHAR(100) NOT NULL,
   id_cargo INT NOT NULL,
+  status BOOLEAN NOT NULL,
 
   FOREIGN KEY (id_cargo) REFERENCES cargos(id)
   ON UPDATE CASCADE ON DELETE RESTRICT
 );
-INSERT INTO usuarios VALUES (null, 'admin', '$2y$10$UsHj6sGRAzY0b1alOfqqCu0FWy9BgGM6.yxDpS9oGqv34woyDBP4K', 1); /*essa senha é 123*/
+INSERT INTO usuarios VALUES (null, 'admin', '$2y$10$UsHj6sGRAzY0b1alOfqqCu0FWy9BgGM6.yxDpS9oGqv34woyDBP4K', 1, 1); /*essa senha é 123*/
 select * from usuarios;
 
 
