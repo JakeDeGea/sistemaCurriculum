@@ -261,6 +261,7 @@
 
     <!--  FUNÇÕES EM JAVASCRIPT-->
     <script>
+    // Limpa os dados informados
       $(document).ready(function () {
         $('#btn_limpar').on('click', function () {
           $('#i_nome').val('');
@@ -291,9 +292,11 @@
           $('#i_senha_confirm').val('');
           $('#i_nome').focus();
         });
+        //Função da Sidebar (Dashboard)
         $('#sideCollapse').on('click', function () {
           $('#sidebar').toggleClass('active');
         });
+        //Modal do botão pesquisar
         $('#modal_container').on('click', function () {
           $('#modal_container').hide();
           $('#modalzao_massa').hide();
