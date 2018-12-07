@@ -85,3 +85,20 @@ button#btn_pesquisar h2, button#btn_limpar h2 {
   min-width: 200px;
   min-height: 200px;
 }
+
+label#textLabel{
+  display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: .85em;
+    font-weight: bold;
+}
+
+input#m_cpf{
+  display: block;
+  margin: auto;
+  align: middle;
+  text-align: center;
+
+
+}

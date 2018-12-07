@@ -240,16 +240,26 @@
     <!-- modal improvisado -->
     <div id="modal_container"></div>
     <div id="modalzao_massa">
-      <form id="modal_form" action="">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="modal_title">Pesquisar funcionário</h5>
+        <button type="button" id="btn-close-modal" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form id="modal_form">
         <div class="form-row">
           <div class="form-group col-md">
-            <label for="m_cpf">Informe o CPF do Funcionário</label>
+            <label id="textLabel" for="m_cpf">CPF:</label>
             <input type="text" name="m_cpf" id="m_cpf" value="" placeholder="000.000.000-00" required>
           </div>
         </div>
+        <div class="modal-footer">
         <button type="submit" class="btn" name="b_m_pesquisar_func" id="b_m_pesquisar_func">Pesquisar</button>
+        </div>
       </form>
     </div>
+  </div>
+
     <!-- fim modal -->
 
     <!-- Optional JavaScript -->
@@ -297,17 +307,27 @@
           $('#i_senha_confirm').val('');
           $('#i_nome').focus();
         });
+        // Função do abre e fecha (Dashboard)
         $('#sideCollapse').on('click', function () {
           $('#sidebar').toggleClass('active');
         });
+        //ESCONDE MODAL
         $('#modal_container').on('click', function () {
           $('#modal_container').hide();
           $('#modalzao_massa').hide();
         });
+        //ABRE BOTÃO MODAL DA FUNÇÃO DO BOTAO PESQUISAR
         $('#btn_pesquisar').on('click', function () {
           $('#modal_container').show();
           $('#modalzao_massa').show();
         });
+
+        //Esconde modal ao clicar no btn-close-modal
+        $('#btn-close-modal').on('click', function () {
+          $('#modal_container').hide();
+          $('#modalzao_massa').hide();
+        });
+
         // $('#b_m_pesquisar_func').submit(function(e){
         $('#b_m_pesquisar_func').on('click', function(e){
           // verifica erro e pega as informações do form do modal e passa por get pra consuta
@@ -315,6 +335,7 @@
           var values = $("#modal_form").serialize();
           console.log(values);
 
+          //PEGA DADOS DO USUÁRIO
           $.get('../controller/funcionario/pesquisar_funcionario.php?' + values, function(data){
             // usa a variável data pra pegar as informações da pesquisa
             var response = $.parseJSON(data);
