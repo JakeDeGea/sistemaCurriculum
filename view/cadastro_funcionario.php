@@ -2,7 +2,7 @@
 <html lang="pt-br" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Cadastro de Funcionário</title>
+    <title>Funcionário</title>
     <meta http-equiv="X-UA-Compatible" content="IE-edge, chrome=1">
 
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
@@ -31,7 +31,7 @@
           <section>
             <ul id="opcoes_side_bar" class="list-unstyled components">
               <li>
-                <a href="cadastro_funcionario.php"><i style="color: white" class="glyphicon glyphicon-user"></i>Cadas&shy;trar Funcio&shy;nário</a>
+                <a href="cadastro_funcionario.php"><i style="color: white" class="glyphicon glyphicon-user"></i>Funcio&shy;nário</a>
               </li>
             </ul>
           </section>
@@ -41,7 +41,7 @@
       <!-- O conteúdo é aqui -->
       <section id="corpo">
         <header>
-          <h1>Cadas&shy;tro de Fun&shy;cioná&shy;rio</h1>
+          <h1 id="topo_info">Cadastrar Fun&shy;cioná&shy;rio</h1>
         </header>
         <?php if(isset($_GET['cadastroRealizado']) && $_GET['cadastroRealizado']) { ?>
           <div class="alert alert-success">
@@ -263,6 +263,12 @@
     <script>
       $(document).ready(function () {
         $('#btn_limpar').on('click', function () {
+          // esconde o botao excluir
+          $('#btn_excluir').hide();
+
+          // volta o topo pra cadastrar funcionario
+          $('#topo_info').text('Cadastrar Funcionário');
+
           $('#i_nome').val('');
           $('#i_nascimento').val('');
           $('#i_nacionalidade').val('');
@@ -358,6 +364,11 @@
                 timer: 1200
               })
 
+              // muda o topo pra editar funcionario
+              $('#topo_info').text('Editar Funcionário');
+
+              // mostra o botao excluir
+              $('#btn_excluir').show();
             } else {
               // esconde o modal
               $('#modal_container').hide();
