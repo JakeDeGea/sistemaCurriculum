@@ -20,7 +20,10 @@ if (!$conecta) {
       $acesso = mysqli_query($conecta, $sql);
       $resultado = mysqli_fetch_assoc($acesso);
       // var_dump(count($resultado));
+
+      //Cria o hash da senha
       $hash = password_hash($senha, PASSWORD_DEFAULT);
+
       $aux = count($resultado);
       if ($aux == 0) {
         // aqui comeca a parte de enderecos
