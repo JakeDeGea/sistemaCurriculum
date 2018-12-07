@@ -104,6 +104,7 @@ input#m_cpf{
 /* Botão do AJAX para desabilitar ou habilitar status do Usuario CSS */
 
 .onoffswitch {
+    display: none;
     margin-top: 1%; margin-right: 1%;
     float: right;
     position: relative; width: 110px;

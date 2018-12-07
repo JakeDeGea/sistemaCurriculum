@@ -47,8 +47,8 @@
           <div id="f_flipswitch" class="onoffswitch">
             <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
             <label class="onoffswitch-label" for="myonoffswitch">
-              <span class="onoffswitch-inner"></span>
-              <span class="onoffswitch-switch"></span>
+              <span id="switchange" class="onoffswitch-inner"></span>
+              <span id="switchange" class="onoffswitch-switch"></span>
             </label>
           </div>
 
@@ -317,7 +317,6 @@
           $('#i_username').val('');
           $('#i_senha').val('');
           $('#i_senha_confirm').val('');
-          $('#a_status').val('');
           $('#i_nome').focus();
         });
         // Função do abre e fecha (Dashboard)
@@ -384,12 +383,12 @@
               $('#i_pais').val(data.pais);
               $('#i_username').val(data.login);
               $('#i_cpf').val(data.cpf);
-              $('#a_status').val(data.status);
+              $('#f_flipswitch').val(data.status);
 
-              if ($('#a_status').val() == 1){
-                $('#a_status').val('Ativo');
+              if ($('#f_flipswitch').val() == 1){
+                //fazer ainda
               } else {
-                $('#a_status').val('Inativo');
+                $('#f_flipswitch').val('Inativo');
               }
 
               // esconde o modal
