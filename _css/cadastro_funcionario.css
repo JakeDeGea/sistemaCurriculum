@@ -27,7 +27,7 @@ input#i_masc, input#i_fem {
 input#i_fem {
   margin-left: 10px;
 }
-button#btn_salvar, button#btn_editar,
+button#btn_salvar, button#btn_excluir,
 button#btn_pesquisar, button#btn_limpar {
   position: fixed;
   padding: 15px;
@@ -48,14 +48,14 @@ button#btn_limpar {
   bottom: 10px;
   background-color: #94ba33;
 }
-button#btn_editar {
-  opacity: 0.5;
-  visibility: visible;
+button#btn_excluir {
+  opacity: 1;
+  display: none;
   right: 584px;
   bottom: 10px;
   background-color: #94ba33;
 }
-button#btn_salvar h2, button#btn_editar h2,
+button#btn_salvar h2, button#btn_excluir h2,
 button#btn_pesquisar h2, button#btn_limpar h2 {
   margin: 0px;
   font-weight: bold;

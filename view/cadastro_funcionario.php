@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="../_css/header.css">
     <link rel="stylesheet" href="../_css/inicio.css">
     <link rel="stylesheet" href="../_css/cadastro_funcionario.css">
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
   </head>
   <body>
     <?php
@@ -202,7 +200,7 @@
                   </div>
                   <div class="form-group col-md-3">
                     <label for="i_estado">Estado</label>
-                    <input type="text" class="form-control" name="i_estado" id="i_cidade" placeholder="Insira o estado" required>
+                    <input type="text" class="form-control" name="i_estado" id="i_estado" placeholder="Insira o estado" required>
                   </div>
                   <div class="form-group col-md-3">
                     <label for="i_pais">País</label>
@@ -225,13 +223,13 @@
                   </div>
                   <div class="form-group col-md-4">
                     <label for="i_senha_confirm">Con&shy;firme a Senha</label>
-                    <input type="password" class="form-control" name="i_senha_confirm" id="i_senha_confirm" placeholder="" required>
+                    <input type="password" editable="false" class="form-control" name="i_senha_confirm" id="i_senha_confirm" placeholder="" required>
                   </div>
                 </div>
               </fieldset>
               <button type="submit" class="btn" id="btn_salvar"><h2>Salvar</h2></button>
               <button type="button" class="btn" id="btn_pesquisar"><h2>Pesquisar</h2></button>
-              <button type="button" class="btn" id="btn_editar"><h2>Editar</h2></button>
+              <button type="button" class="btn" id="btn_excluir"><h2>Excluir</h2></button>
               <button type="button" class="btn" id="btn_limpar"><h2>Limpar</h2></button>
             </form>
           </div>
@@ -239,26 +237,60 @@
       </section>
     </div>
 
-    <div id="modal_container">
-
-    </div>
+    <!-- modal improvisado -->
+    <div id="modal_container"></div>
     <div id="modalzao_massa">
-      <form>
+      <form id="modal_form" action="">
         <div class="form-row">
           <div class="form-group col-md">
             <label for="m_cpf">Informe o CPF do Funcionário</label>
-            <input type="text" class="btn" name="m_cpf" id="m_cpf" value="" placeholder="000.000.000-00" required>
+            <input type="text" name="m_cpf" id="m_cpf" value="" placeholder="000.000.000-00" required>
           </div>
         </div>
-        <button type="submit" name="b_m_pesquisar_func" id="b_m_pesquisar_func">Pesquisar</button>
+        <button type="submit" class="btn" name="b_m_pesquisar_func" id="b_m_pesquisar_func">Pesquisar</button>
       </form>
     </div>
+    <!-- fim modal -->
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.29.0/dist/sweetalert2.all.min.js" integrity="sha256-FABHlNZdWEEvD1Ge8L18a01NTTLNiZ4uD8hdl5QG5BI=" crossorigin="anonymous"></script>
 
-
-    <!--  FUNÇÕES EM JAVASCRIPT PARA DASHBOARD-->
+    <!--  FUNÇÕES EM JAVASCRIPT-->
     <script>
       $(document).ready(function () {
+        $('#btn_limpar').on('click', function () {
+          $('#i_nome').val('');
+          $('#i_nascimento').val('');
+          $('#i_nacionalidade').val('');
+          $('#i_naturalidade').val('');
+          $('#i_cpf').val('');
+          $('#i_rg').val('');
+          $('#i_data_rg').val('');
+          $('#i_orgao_rg').val('');
+          $('#i_pis').val('');
+          $('#i_pasep').val('');
+          $('#i_nome_mae').val('');
+          $('#i_nome_pai').val('');
+          $('#i_email').val('');
+          $('#i_telefone').val('');
+          $('#i_celular').val('');
+          $('#i_rua').val('');
+          $('#i_num').val('');
+          $('#i_cep').val('');
+          $('#i_complemento').val('');
+          $('#i_bairro').val('');
+          $('#i_cidade').val('');
+          $('#i_estado').val('');
+          $('#i_pais').val('');
+          $('#i_username').val('');
+          $('#i_senha').val('');
+          $('#i_senha_confirm').val('');
+          $('#i_nome').focus();
+        });
         $('#sideCollapse').on('click', function () {
           $('#sidebar').toggleClass('active');
         });
@@ -270,7 +302,78 @@
           $('#modal_container').show();
           $('#modalzao_massa').show();
         });
-        
+        // $('#b_m_pesquisar_func').submit(function(e){
+        $('#b_m_pesquisar_func').on('click', function(e){
+          // verifica erro e pega as informações do form do modal e passa por get pra consuta
+          e.preventDefault();
+          var values = $("#modal_form").serialize();
+          console.log(values);
+
+          $.get('../controller/funcionario/pesquisar_funcionario.php?' + values, function(data){
+            // usa a variável data pra pegar as informações da pesquisa
+            var response = $.parseJSON(data);
+            console.log(response)
+
+            // se a vaiável sucess for verdadeira mostra as informações trazidas pela data
+            if(response.success) {
+              var data = response.data;
+
+              $('#i_nome').val(data.nome);
+              $('#i_nascimento').val(data.nascimento);
+              $('#i_sexo').val(data.sexo);
+              $('#i_naturalidade').val(data.naturalidade);
+              $('#i_nacionalidade').val(data.nacionalidade);
+              $('#i_est_civil').val(data.estado_civil);
+              $('#i_rg').val(data.rg);
+              $('#i_data_rg').val(data.data_emissao_rg);
+              $('#i_orgao_rg').val(data.orgao_emissor_rg);
+              $('#i_pis').val(data.numero_pis);
+              $('#i_pasep').val(data.numero_pasep);
+              $('#i_nome_mae').val(data.nomeda_mae);
+              $('#i_nome_pai').val(data.nomedo_pai);
+              $('#i_email').val(data.email);
+              $('#i_telefone').val(data.telefone);
+              $('#i_celular').val(data.telefone_celular);
+              $('#i_rua').val(data.rua);
+              $('#i_num').val(data.numero);
+              $('#i_cep').val(data.cep);
+              $('#i_complemento').val(data.complemento);
+              $('#i_bairro').val(data.bairro);
+              $('#i_cidade').val(data.cidade);
+              $('#i_estado').val(data.estado);
+              $('#i_pais').val(data.pais);
+              $('#i_username').val(data.login);
+              $('#i_cpf').val(data.cpf);
+
+              // esconde o modal
+              $('#modal_container').hide();
+              $('#modalzao_massa').hide();
+
+              //mensagem de confirmação massa
+              swal({
+                position: 'center',
+                type: 'success',
+                title: 'Funcionário encontrado!',
+                showConfirmButton: false,
+                timer: 1200
+              })
+
+            } else {
+              // esconde o modal
+              $('#modal_container').hide();
+              $('#modalzao_massa').hide();
+
+              //mensagem de erro massa
+              swal({
+                position: 'center',
+                type: 'error',
+                title: 'Funcionário não encontrado!',
+                showConfirmButton: false,
+                timer: 1200
+              })
+            } // fim else
+          } /* fim do get*/);
+        }); //fim da função Pesquisar
       });
     </script>
   </body>
