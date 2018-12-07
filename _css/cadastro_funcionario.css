@@ -7,6 +7,7 @@ section#corpo header h1{
   font-size: 24pt;
   font-weight: bold;
   padding: 15px;
+  margin-bottom: 0px;
   padding-bottom: 20px;
   background-color: #dddd;
 }
@@ -26,7 +27,8 @@ input#i_masc, input#i_fem {
 input#i_fem {
   margin-left: 10px;
 }
-button#btn_salvar {
+button#btn_salvar, button#btn_excluir,
+button#btn_pesquisar, button#btn_limpar {
   position: fixed;
   padding: 15px;
   padding-left: 35px;
@@ -35,7 +37,68 @@ button#btn_salvar {
   bottom: 10px;
   background-color: #94ba33;
 }
-button#btn_salvar h2 {
+button#btn_pesquisar {
+  right: 179px;
+  bottom: 10px;
+  background-color: #94ba33;
+}
+button#btn_limpar {
+  opacity: 1;
+  right: 400px;
+  bottom: 10px;
+  background-color: #94ba33;
+}
+button#btn_excluir {
+  opacity: 1;
+  display: none;
+  right: 584px;
+  bottom: 10px;
+  background-color: #94ba33;
+}
+button#btn_salvar h2, button#btn_excluir h2,
+button#btn_pesquisar h2, button#btn_limpar h2 {
   margin: 0px;
   font-weight: bold;
+}
+#modal_container {
+  position: fixed;
+  display: none;
+  margin: 0px;
+  padding: 0px;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  opacity: 0.5;
+  background-color: black;
+}
+#modalzao_massa {
+  position: fixed;
+  display: none;
+  opacity: 1;
+  top: 33%;
+  left: 33%;
+  right: 33%;
+  bottom: 33%;
+  border-radius: 5px;
+  background-color: white;
+  min-width: 200px;
+  min-height: 200px;
+}
+
+label#textLabel{
+  display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: .85em;
+    font-weight: bold;
+}
+
+input#m_cpf{
+  display: block;
+  margin: auto;
+  align: middle;
+  text-align: center;
+
+
 }

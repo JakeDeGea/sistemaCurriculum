@@ -13,8 +13,6 @@ if (!$conecta) {
     $senha = $_POST['i_senha'];
     $senhaConfirm = $_POST['i_senha_confirm'];
 
-
-
     if ($senha == $senhaConfirm) {
       $sql = "SELECT * FROM usuarios WHERE login = '$user'";
       $acesso = mysqli_query($conecta, $sql);
@@ -111,8 +109,7 @@ if (!$conecta) {
 
                   if (mysqli_query($conecta, $sql)) {
                     //cadastro realizado com sucesso
-                    echo "cadastro realizado";
-                    // header('location: ../../view/cadastro_funcionario.php');
+                    header('location: ../../view/cadastro_funcionario.php?cadastroRealizado=true');
                   } else {
                     //falha ao tentar cadastrar o funcionario
                     echo "Erro <br>" . $sql . "<br>" . mysqli_error($conecta);
@@ -127,7 +124,6 @@ if (!$conecta) {
                 // falha ao tentar cadastrar o usuario
                 echo "Erro <br>" . $sql . "<br>" . mysqli_error($conecta);
               }
-
 
               mysqli_close($conecta);
             } else {
@@ -145,7 +141,6 @@ if (!$conecta) {
           header('location: ../../view/cadastro_funcionario.php');
         }
 
-
       } else {
         // existe outro user com esse nickname
         header('location: ../../view/cadastro_funcionario.php');
@@ -155,6 +150,7 @@ if (!$conecta) {
       // senhas não batem
       header('location: ../../view/cadastro_funcionario.php');
     }
+
   } else {
     // falta dados de login
     header('location: ../../view/cadastro_funcionario.php');

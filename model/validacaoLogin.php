@@ -1,8 +1,5 @@
+<?php require_once("conexao.php");
 
-<?php require_once("conexao.php"); ?>
-
-
-<?php
 //INICIAR SESSÃO
 session_start();
 
@@ -19,7 +16,6 @@ if (isset($_POST['login'])){
 
   $acesso = password_verify($senha, $hash);
   $acesso = true;
-
 
   if (!$acesso) {
     //Se acesso não for verdadeiro volta para página de LOGIN SHUA SHUA
@@ -43,5 +39,4 @@ if (isset($_POST['login'])){
     $_SESSION['usuarioCargo'] = $resultado['nome'];
   }
 }
-
 ?>
