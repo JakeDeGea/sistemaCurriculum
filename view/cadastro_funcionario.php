@@ -50,6 +50,7 @@
             <h4>Cadastro realizado</h4>
           </div>
         <?php } ?>
+
         <section>
           <div class="container-fluid" id="container_cad_func">
           <form id="form_cadastro_funcionario" action="../controller/funcionario/inserirfuncionario.php" method="post">

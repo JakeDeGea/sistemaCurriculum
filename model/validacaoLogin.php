@@ -15,7 +15,6 @@ if (isset($_POST['login'])){
   $hash = $resultado['senha'];
 
   $acesso = password_verify($senha, $hash);
-  $acesso = true;
 
   if (!$acesso) {
     //Se acesso não for verdadeiro volta para página de LOGIN SHUA SHUA
