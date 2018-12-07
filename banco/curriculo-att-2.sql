@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS cargos (
 );
 INSERT INTO cargos VALUES(null, 'Administrador', 'pika das galáxias');
 INSERT INTO cargos VALUES(null, 'funcionário', 'dont have power');
+select * from cargos;
 
 -- -----------------------------------------------------
 -- Table `curriculo`.`usuario`
@@ -26,7 +27,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
   FOREIGN KEY (id_cargo) REFERENCES cargos(id)
   ON UPDATE CASCADE ON DELETE RESTRICT
 );
-INSERT INTO usuarios VALUES (null, 'admin', '', 1);
+INSERT INTO usuarios VALUES (null, 'admin', '$2y$10$UsHj6sGRAzY0b1alOfqqCu0FWy9BgGM6.yxDpS9oGqv34woyDBP4K', 1); /*essa senha é 123*/
+select * from usuarios;
 
 
 -- -----------------------------------------------------
