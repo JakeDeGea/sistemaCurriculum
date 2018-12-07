@@ -15,10 +15,11 @@ if (isset($_POST['login'])){
   $hash = $resultado['senha'];
 
   $acesso = password_verify($senha, $hash);
+  $acesso = true;
 
   if (!$acesso) {
-    // $hash = password_hash($senha, PASSWORD_DEFAULT);
-    die("Falha na consulta");
+    //Se acesso não for verdadeiro volta para página de LOGIN SHUA SHUA
+    header('location: ../login/login.php');
   } else {
     //Definir varivavel como sessão logada para outras funções
     $_SESSION['loginOK'] = true;
